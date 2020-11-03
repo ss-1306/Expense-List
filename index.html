@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./index_jquery.js"></script>
+    <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="./bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="exercise4.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>List of Products</h1>
+    <table id="invoice_table" class="table">
+        <thead class="thead-dark">
+            <th>SNo</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th colspan="2">Actions</th>
+        </thead>
+        <tbody id="tbody">
+
+        </tbody>
+    </table>
+    <hr>
+    <div>
+        <button class="btn btn-success" onclick="onAdd()">Add Row</button>
+    </div>
+    <div id="update">
+        <form id="editForm">
+            <hr>
+            <h1>Update Product</h1>
+            <div   class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" class="input" id="name" required>
+            </div>
+            <div  class="form-group">
+                <label for="category">Category:</label>
+                <input type="text" class="input" id="category" required>
+            </div>
+            <div  class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" class="input" id="price"  required>
+            </div>
+        
+            <button id="updateBtn" type="submit" class="btn btn-success">Update</button>
+            <button id="cancelBtn" onclick="onCancel()" class="btn btn-danger">Cancel</button>
+        </form>
+    </div>
+
+    <div id="addRow">
+        <form id="rowForm">
+            <hr>
+            <h1>Add Row</h1>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="rowName" required>
+            </div>
+            <div class="form-group">
+                <label for="category">Category:</label>
+                <input type="text" id="rowCategory" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" id="rowPrice" required>
+            </div>
+            <button id="addBtn" type="submit" class="btn btn-success">Add</button>
+            <button class="btn btn-danger" type="button" onclick="onAddCancel()">Cancel</button>
+        </form>
+    </div>
+
+    <div>
+        <p id="json_hh"></p>
+    </div>
+    <!-- <script src="exercise4.js"></script> -->
+    </div>
+</body>
+
+</html>
